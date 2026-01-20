@@ -10,14 +10,28 @@
 
 }
 /* shared styles */
+.content,
+.about ,
+.facilities{
+    background-color: #1A0B2E;
+    text-align: center;
+}
 .linear-gradient{
     background: linear-gradient(to right, #F7E93F , #FB09B4 , #9100F8 );
    
 }
 .small-text{
     font-size: 16px;
-    color: #ffffff;
+    color: #ffffff60;
     
+}
+
+.text-gradient{
+    background: linear-gradient(to right, #F7E93F , #FB09B4 , #9100F8 ) ;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 .header-page{
     background-color: #1A0B2E;
@@ -43,7 +57,8 @@
     
 }
 .logo{
-    font-size: 32px;
+    width: 220px;
+    font-size: 40px;
     font-weight: bold;
     color: #ffffff;
 }
@@ -82,11 +97,17 @@
 }
 /* Banner styles */
 .banner{
+    max-width: 1600px;
     text-align: center;
     background: url(../assets/hero-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:  center;
     padding: 100px 525px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
 }
 .banner-image{
     width: 350px;
@@ -96,10 +117,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 625px 40px 625px;
+    position: relative;
+    right: 38px;
+
     
 }
 .banner-heading{
+    margin-top: 40px;
     font-size: 60px;
     font-weight: 900;
     color: #ffffff;
@@ -109,6 +133,9 @@
     margin-bottom: 24px;
     
 
+}
+.banner-button{
+    display: flex;
 }
 .lisioning-button{
     width: 200px;
@@ -134,10 +161,7 @@
     color: #00FF88;
 }
 /* about section styles */
-.about{
-    background-color: #1A0B2E;
-    text-align: center;
-}
+
 .about-container{
     padding: 50px 200px 120px 200px;
 }
@@ -176,7 +200,7 @@
 .facilities{
     background-color: #230E3D;
     padding: 120px 200px;
-    text-align: center;
+    
 }
 .facilities-heading{
     font-size: 2.67rem;
@@ -222,4 +246,99 @@
 }
 .product-detailes{
     line-height: 24px;
+}
+/* Content section styles */
+.content{
+    
+    text-align: center;
+    padding: 120px 200px;
+
+}
+
+
+
+.content-heading{   
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+.content-episode{
+    display: flex;
+    gap: 30px;
+}
+.vedios{
+    background-color: #250D44;
+    text-align: left;
+    border-radius: 8px;
+}
+.discription{
+    padding: 24px;
+}
+.vedio-heading{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+.vedio-tittle{
+    margin-bottom: 12px;
+}
+/* Host styles */
+.host{
+    margin-top: 120px;
+
+}
+.host-container{
+    
+    background-color: rgba(53, 17, 101, 0.4);
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 30px;
+}
+.host-details{
+    text-align: left;
+}
+.host-name{
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.host-skills{
+    margin-bottom: 16px;
+}
+.social-media{
+    display: flex;
+    gap: 8px;
+    width: 40px;
+      
+}
+.social{
+    padding: 5px;
+    border: 1px solid brown;
+    border-radius: 50%;
+}
+/* footer section style */
+.footer-section{
+    background: url(../assets/footer-bg.png);
+    text-align: center;
+    padding: 120px;
+}
+.footer-heading{
+    font-size: 60px;
+    font: 900;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+.footer-social-media{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 32px;
+}
+.footer-icon{
+    width: 24px;
+    height: 24px;
 }
