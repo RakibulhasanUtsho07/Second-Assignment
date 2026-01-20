@@ -7,8 +7,13 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
+html , body{
+    overflow-x: hidden;
+}
+
 /* shared styles */
 .content,
 .about ,
@@ -21,7 +26,7 @@
    
 }
 .small-text{
-    font-size: 16px;
+    font-size: .889rem;
     color: #ffffff60;
     
 }
@@ -41,24 +46,27 @@
     color: #00FF88;
 }
 .font-size-24{
-    font-size: 24;
+    font-size: 1.33rem;
     font-weight: bold;
     color: #ffffff;
 }
 .text-left{
     text-align: left;
 }
+.btn:hover{
+    box-shadow: 0 0 30px rgba(251, 9, 180, 0.5), 0 0 60px rgba(145, 0, 248, 0.3);
+   
+}
 /* navigation bar styles */
 .navbar{
     display: flex;
     justify-content: space-between;
-    
     padding: 30px 200px;
     
 }
 .logo{
-    width: 220px;
-    font-size: 40px;
+    
+    font-size: 2.22rem;
     font-weight: bold;
     color: #ffffff;
 }
@@ -72,7 +80,7 @@
 }
 .link{
     text-decoration: none;
-    font-size: 16px;
+    font-size: .889rem;
     line-height: 120%;
     color: #ffffff;
     font-weight: 500;
@@ -84,17 +92,17 @@
     display: flex;
      border-radius: 10000px;
     align-items: center;
-    font-size: 16px;
+    font-size: .889rem;
     font-weight: 600px;
     color: #ffffff;
     
 }
 .btn{
     padding: 12px 16px;
-    background: linear-gradient();
-    
+    background: linear-gradient(to right, #F7E93F , #FB09B4 , #9100F8 );
     cursor: pointer;
 }
+
 /* Banner styles */
 .banner{
     max-width: 100%;
@@ -109,23 +117,43 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    z-index: -100;
+    padding: 100px 10px;
     
 }
 .banner-image{
     width: 300px;
     height: 300px;
-    border: 10px solid rgba(42, 24, 108, 1);
+    border: 8px solid rgba(42, 24, 108, 1);
+    box-shadow: 0 0 30px rgba(251, 9, 180, 0.5), 0 0 60px rgba(145, 0, 248, 0.3);
+    animation: pulse 3s infinite ease-in-out;
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
+}
 
+.banner-icon{
+    z-index: 20;
+}
+.icon{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1A0B2E;
+    background-color: #00FF88;
+    padding:  16px;
+    border-radius: 1000px;
+    margin-bottom: -100px;
+    margin-left: 200px;
+    border: 1px solid #1A0B2E;
+    
+    
+    
     
 }
 .banner-heading{
     margin-top: 40px;
-    font-size: 60px;
+    font-size: 3.333rem;
     font-weight: 900;
     color: #ffffff;
     margin-bottom: 8px;
@@ -138,6 +166,7 @@
 .banner-button{
     display: flex;
     justify-content: center;
+    
 }
 .lisioning-button{
     width: 200px;
@@ -163,12 +192,14 @@
     color: #00FF88;
 }
 /* about section styles */
-
+.about{
+    padding-top:  120px;
+}
 .about-container{
     padding: 50px 200px 120px 200px;
 }
-.podcast-detailes{
-    font-size: 48px;
+.podcast-details{
+    font-size: 2.667rem;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 16px;
@@ -189,12 +220,9 @@
     justify-content: space-between;
     
 }
-.epic{
-    width: 240px;
-    height: 58px;
-}
+
 .epic-heading{
-    font-size: 48px;
+    font-size: 2.667rem;
     font-weight: 900;
     margin-bottom: 16px;
 
@@ -205,7 +233,7 @@
     
 }
 .facilities-heading{
-    font-size: 2.67rem;
+    font-size: 2.667rem;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 40px;
@@ -259,14 +287,16 @@
 
 
 
-.content-heading{   
-    font-size: 48px;
+.content-heading ,
+.host-heading{   
+    font-size: 2.667rem;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 40px;
 }
 .content-episode{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
     gap: 30px;
 }
 .vedios{
@@ -278,7 +308,7 @@
     padding: 24px;
 }
 .vedio-heading{
-    font-size: 24px;
+    font-size: 1.33rem;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 12px;
@@ -304,7 +334,7 @@
 }
 .host-name{
     margin-bottom: 16px;
-    font-size: 32px;
+    font-size: 1.778rem;
     font-weight: bold;
     color: #ffffff;
 }
@@ -324,18 +354,33 @@
 }
 /* footer section style */
 .footer-section{
+    width: 100%;
     background: url(../assets/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
     text-align: center;
-    padding: 120px;
+    
+
+    
+}
+.footer-container{
+   margin: 120px 0;
 }
 .footer-heading{
-    font-size: 60px;
+    font-size: 3.33rem;
     font: 900;
     color: #ffffff;
     margin-bottom: 32px;
 }
 .footer-social-media{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
     justify-content: center;
     gap: 100px;
     margin-bottom: 32px;
@@ -343,4 +388,147 @@
 .footer-icon{
     width: 24px;
     height: 24px;
+}
+.navbar-mobile-screen{
+    display: none;
+}
+
+@media screen and (max-width:576px) {
+    .nav-pages,
+    .subscribe{
+        display: none;
+    }
+    .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    
+}
+    .humberger-icon{
+        padding: 20px 20px;
+        cursor: pointer;
+    }
+    
+         
+
+
+    .mobile-menu-items{
+        background-color: #080946;
+        color: #00FF88;
+        border-radius: 1000px;
+}
+    .banner{
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        padding: 10px 10px;   
+         
+}
+    .banner-image{
+        width: 150px;
+        height: 150px;
+        border: 5px solid rgba(42, 24, 108, 1);
+       
+        
+    
+    
+}
+    .microphone-image{
+        width: 60px;
+        height: 90px;
+    }
+    .icon{
+    
+        padding:  10px;
+    
+        margin-bottom: -100px;
+        margin-left: 110px;
+    } 
+
+    .about{
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .about-container{
+         padding: 20px ;
+    }
+    .podcast-details{
+        
+        font-size: 1.667rem;
+         margin-bottom: 10px;
+    }
+    .hr-line{
+        margin: 20 0;
+      
+        
+    }
+    .about-epic{
+        
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2 , 1fr);
+    
+}
+    .epic-heading{
+        
+         margin-bottom: 8px;  
+}
+    .facilities{
+        padding: 10px;
+        padding-top: 40px;
+        
+
+}
+    .facilities-heading,
+    .content-heading,
+    .host-heading{
+        font-size: 1.667rem;
+    
+        margin-bottom: 20px;
+        padding: 20px 0;
+}
+    .facilities-container{
+    
+     
+         grid-template-columns: repeat(1 ,1fr);
+}
+    .content{
+    
+         text-align: center;
+         padding: 10px;
+
+}
+    .content-episode{
+    
+        grid-template-columns: repeat(1 , 1fr);
+    
+}
+    .host{
+        margin-top: 20px;
+}
+    .host-container{
+        flex-direction: column;
+        padding: 10px;
+    
+} 
+    .footer-social-media{
+    
+        grid-template-columns: repeat(2 , 1fr);
+    
+        gap: 50px;
+        margin-bottom: 20px;
+}  
+    .host-skills{
+        line-height: 26px;
+    }
+    .footer-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .host{
+        margin-bottom: 50px;
+    }
+    
+
 }
